@@ -3,15 +3,51 @@
 <form class="form mt-4" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
   <div class="mb-3">
     <input class="form-control" placeholder="e-mail" formControlName="email"/>
+
+    <app-mensagem *ngIf="
+    novoUsuarioForm.get('email')?.errors?.['required'] && 
+    novoUsuarioForm.get('email')?.touched
+    " 
+    mensagem="E-mail obrigatório"></app-mensagem>
+
+    <app-mensagem *ngIf="
+    novoUsuarioForm.get('email')?.errors?.['email'] && 
+    novoUsuarioForm.get('email')?.touched
+    " 
+    mensagem="E-mail no formato incorreto"></app-mensagem>
+
   </div>
   <div class="mb-3">
     <input class="form-control" placeholder="Nome completo" formControlName="fullName"/>
+
+    <app-mensagem *ngIf="
+    novoUsuarioForm.get('fullName')?.errors && 
+    novoUsuarioForm.get('fullName')?.touched
+    " 
+    mensagem="Nome completo obrigatório"></app-mensagem>
+    
   </div>
   <div class="mb-3">
     <input class="form-control" placeholder="Usuário" formControlName="userName"/>
+    
+    <app-mensagem *ngIf="
+    novoUsuarioForm.get('userName')?.errors?.['minusculo'] && 
+    novoUsuarioForm.get('userName')?.touched
+    " 
+    mensagem="Usuário deve ser em letra minúscula"></app-mensagem>
+
+    <app-mensagem *ngIf="
+    novoUsuarioForm.get('userName')?.errors?.['usuarioExistente']
+    " 
+    mensagem="Usuário já existe"></app-mensagem>
   </div>
   <div class="mb-3">
     <input type="password" class="form-control" placeholder="Senha" formControlName="password"/>
+    <app-mensagem
+      *ngIf="
+      novoUsuarioForm.errors?.['senhaIgualUsuario']
+      "
+      mensagem="Senha deve ser diferente do usuário"></app-mensagem>
   </div>
   <div class="d-grid gap-2">
     <button class="btn btn-primary">Cadastre-se</button>
