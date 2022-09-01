@@ -1,0 +1,40 @@
+header {
+  margin: .7rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  background: white;
+}
+
+.navbar {
+  margin: .5rem;
+}
+
+.navbar-brand {
+  display: flex;
+  cursor: default;
+  letter-spacing: .2rem;
+}
+
+.fa-bars {
+  margin-right: .3rem;
+  cursor: pointer;
+}
+
+.deActiveHamburguer {
+  display: none;
+}
+
+.fa-user-circle {
+  margin-right: .2rem;
+}
+
+.userName {
+  margin-right: .2rem;
+  text-decoration: none;
+  cursor: default;
+}
+
+.logout {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

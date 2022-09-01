@@ -1,8 +1,20 @@
 <header class="sticky-top">
-  <nav class="navbar navbar-light bg-white">
+  <nav class="navbar">
     <a class="navbar-brand">
-      <i class="fa fa-bars mr-2" (click)="menu.abreMenu()" (keyup.space)="menu.abreMenu()"></i>
-      Animal book</a>
+      <div *ngIf="user$ | async as user">
+        <div *ngIf="user.name; else deActiveHamburguer">
+          <i
+            class="fa fa-bars"
+            (click)="menu.abreMenu()"
+            (keyup.space)="menu.abreMenu()"
+          ></i>
+        </div>
+      </div>
+      <ng-template #deActiveHamburguer>
+        <i class="deActiveHamburguer"></i>
+      </ng-template>
+      Animal book</a
+    >
     <app-menu #menu>
       <ul class="list-unstyled">
         <li>
@@ -11,10 +23,10 @@
       </ul>
     </app-menu>
     <div *ngIf="user$ | async as user">
-      <div *ngIf="user.name; else login">
-        <i class="fa fa-user-circle mr-1"></i>
-        <a class="mr-1">{{ user.name }}</a>
-        <a (click)="logout()">Logout</a>
+      <div *ngIf="user.name; else login" >
+        <i class="fa fa-user-circle"></i>
+        <a class="userName">{{ user.name }}</a>
+        <a (click)="logout()" class="logout">Logout</a>
       </div>
     </div>
   </nav>

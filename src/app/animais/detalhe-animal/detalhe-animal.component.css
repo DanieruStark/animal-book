@@ -1,0 +1,17 @@
+.row {
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-lg-8 {
+  width: 40%;
+}
+
+.excluir {
+  display: flex;
+  align-items: center;
+  margin-top: .5rem;
+  cursor: pointer;
+}

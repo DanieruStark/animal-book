@@ -1,4 +1,21 @@
 .comentario-list {
-  height: 50vh;
+  height: auto;
   overflow-y: auto;
+}
+
+.comentario-titulo {
+  margin-top: 1rem;
+  margin-bottom: 0;
+
+}
+
+.input-group {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  margin: 1rem;
 }
