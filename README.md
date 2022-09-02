@@ -30,7 +30,10 @@ Em lista de animais ao clicar no animal desejado é aberto uma página contendo 
 
 É possível cadastrar um novo animal a partir do menu hamburguer no cabeçalho, nessa tela você vai subir uma foto do seu pet, colocar um título e configurar se será permitido fazer comentários no card.
 
-![](/img/novo_animal_menu.jpg) [](/img/novo_animal.jpg)
+<img src="/img/novo_animal_menu.jpg" width="70%"> 
+<img src="/img/novo_animal.jpg" width="70%">
+<img src="/img/pag_novo_animal.jpg" width="70%">
+
 
 ## Back-End
 
