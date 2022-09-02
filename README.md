@@ -1,27 +1,49 @@
 # AnimalBook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+AnimalBook é uma SPA (single page application) desenvolvida através da formação AngularJS na Alura. O decorrer desse curso foi mais um passo de muitos outros no aprendizado do framework.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Estrutura
 
-## Code scaffolding
+Essa SPA está estruturada em módulos, tornando a componentização mais segura e com a facilidade de trabalhar cada componente de forma independente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Página de cadastro
 
-## Build
+Página onde é possível adicionar novos usuários, através dessa página de forma interna também é salvo um token de segurança que será enviado para o backend sempre que o usuário logar.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![](/img/cadastro.jpg)
 
-## Running unit tests
+### Lista de animais
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Nessa página é possível ver todos os animais cadastrados bem como quantas curtidas e comentários o card do animal recebeu.
 
-## Running end-to-end tests
+![](/img/lista_animais.jpg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Card do animal
 
-## Further help
+Em lista de animais ao clicar no animal desejado é aberto uma página contendo a foto do pet, título (se tiver sido adicionado durante a inserção do pet), botão para curtir o pet e se comentário foi permitido, comentar.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](/img/card.jpg)
+
+### Novo animal
+
+É possível cadastrar um novo animal a partir do menu hamburguer no cabeçalho, nessa tela você vai subir uma foto do seu pet, colocar um título e configurar se será permitido fazer comentários no card.
+
+![](/img/novo_animal_menu.jpg) [](/img/novo_animal.jpg)
+
+## Back-End
+
+A Api do projeto tem o nome de angular_formularios-main, A api já está desenvolvida e sua utilidade será apenas nos servir de back-end. para consumir a Api siga a instrução abaixo:
+
+Em uma pasta de sua escolha descompacte o arquivo `angular_formularios-main.rar`, após descompactar a pasta, entre pela sua linha de comando na pasta api, use o comando npm i, para instalar as dependências do back-end, e execute-o com o comando npm start. O back-end deve ser executado durante o uso do projeto.
+
+## Considerações finais
+
+É um curso que passa pela grande maioria das funcionalidades e conceitos do Angular e do Typescript, a curva de aprendizado é gigante, foi mais um passo no aprendizado desse framework.
+
+O próximo passo é desenvolver um projeto próprio tão completo quanto este.
+
+<b>“In all forms of strategy, it is necessary to maintain the combat stance in everyday life and to make your everyday stance your combat stance.” Miyamoto Musashi</b>
+
+
